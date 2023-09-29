@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace candemvc.Data.Migrations
+namespace CandelariaP.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

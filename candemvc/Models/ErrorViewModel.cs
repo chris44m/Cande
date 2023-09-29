@@ -1,4 +1,4 @@
-namespace candemvc.Models;
+namespace CandelariaP.Models;
 
 public class ErrorViewModel
 {

@@ -1,0 +1,53 @@
+@model CandelariaP.Models.Compradore
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+
+
+<h4>Compradore</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreComprador" class="control-label"></label>
+                <input asp-for="NombreComprador" class="form-control" />
+                <span asp-validation-for="NombreComprador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApellidoComprador" class="control-label"></label>
+                <input asp-for="ApellidoComprador" class="form-control" />
+                <span asp-validation-for="ApellidoComprador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dni" class="control-label"></label>
+                <input asp-for="Dni" class="form-control" />
+                <span asp-validation-for="Dni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Teléfono" class="control-label"></label>
+                <input asp-for="Teléfono" class="form-control" />
+                <span asp-validation-for="Teléfono" class="text-danger"></span>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

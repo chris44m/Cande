@@ -1,27 +1,17 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace candemvc.Models
+namespace CandelariaP.Models;
+
+public partial class Calle
 {
-    [Table("Calles")]
-    public class Calle
-    {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("ID_Calle")]
-        public int ID_Calle { get; set; }
+    public int IdCalle { get; set; }
 
-        [Display(Name = "Nombre de la calle")]
-        [Column("Nombre_Calle")]
-        public string NombreCalle { get; set; }
+    public string NombreCalle { get; set; }
 
-        public Calle(string nombreCalle)
-        {
-            NombreCalle = nombreCalle;
-        }
-    }
+    public virtual ICollection<Asiento> Asientos { get; set; } = new List<Asiento>();
 
+    public virtual ICollection<Compra> Compras { get; set; } = new List<Compra>();
+
+    public virtual ICollection<Zona> Zonas { get; set; } = new List<Zona>();
 }

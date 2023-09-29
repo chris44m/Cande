@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using candemvc.Models;
+using CandelariaP.Models;
 
-namespace candemvc.Controllers;
+namespace CandelariaP.Controllers;
 
 public class HomeController : Controller
 {

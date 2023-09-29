@@ -1,0 +1,67 @@
+@model IEnumerable<CandelariaP.Models.Compra>
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagenQr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdAsientoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCalleNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCompradorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdZonaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagenQr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCompra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAsientoNavigation.IdAsiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCalleNavigation.IdCalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCompradorNavigation.IdComprador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdZonaNavigation.IdZona)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCompra">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCompra">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCompra">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+
